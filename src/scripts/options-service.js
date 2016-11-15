@@ -8,6 +8,7 @@ export default class AngularColorPickerOptions {
             lightness: false,
             alpha: true,
             round: false,
+            showOnFocus: true,
             case: 'upper',
             format: 'hsl',
             pos: 'bottom left',

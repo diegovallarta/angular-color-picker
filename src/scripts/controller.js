@@ -496,8 +496,12 @@ export default class AngularColorPickerController {
         }
     }
 
-    focus () {
-        this.find('.color-picker-input')[0].focus();
+    focus ($event) {
+        if(this.options.showOnFocus){
+            this.api.open($event);
+        } else if (this.visible) {
+            this.api.close($event);
+        }
     }
 
     update () {

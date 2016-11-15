@@ -79,6 +79,7 @@ $scope.options = {
     saturation: [false, true],
     lightness: [false, true], // Note: In the square mode this is HSV instead of HSL
     alpha: [true, false],
+    showOnFocus: true,
     swatch: [true, false],
     swatchPos: ['left', 'right'],
     swatchBootstrap: [true, false],

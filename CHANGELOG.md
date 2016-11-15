@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.7.0
+
+#### Breaking Changes
+  * None
+
+#### New Features
+  * New showOnFocus option. If set to true, it will work as before, else focusing the input field won't show the color picker
+
+#### Bug Fixes
+  * Clicking on the swatch didn't opened the color picker
+
 ## v2.6.0
 
 #### Breaking Changes
