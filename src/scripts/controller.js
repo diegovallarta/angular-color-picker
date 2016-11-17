@@ -105,6 +105,8 @@ export default class AngularColorPickerController {
                 return true;
             }
 
+            document.body.classList.add('color-picker-open');
+
             this.visible = true;
             this.hueMouse = false;
             this.opacityMouse = false;
@@ -120,11 +122,12 @@ export default class AngularColorPickerController {
         };
 
         this.api.close = (event) => {
-            if (
-                !this.options.inline &&
+            if (!this.options.inline &&
                 (this.visible ||
-                this.$element[0].querySelector('.color-picker-panel').offsetParent !== null)
-            ) {
+                this.$element[0].querySelector('.color-picker-panel').offsetParent !== null)) {
+
+                document.body.classList.remove('color-picker-open');
+
                 this.visible = false;
                 this.$scope.$applyAsync();
 

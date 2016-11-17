@@ -4,7 +4,7 @@
  *
  * Copyright 2016 ruhley
  *
- * 2016-11-15 13:33:59
+ * 2016-11-17 13:54:59
  *
  */
 
@@ -353,6 +353,8 @@ var AngularColorPickerController = function () {
                     return true;
                 }
 
+                document.body.classList.add('color-picker-open');
+
                 _this3.visible = true;
                 _this3.hueMouse = false;
                 _this3.opacityMouse = false;
@@ -369,6 +371,9 @@ var AngularColorPickerController = function () {
 
             this.api.close = function (event) {
                 if (!_this3.options.inline && (_this3.visible || _this3.$element[0].querySelector('.color-picker-panel').offsetParent !== null)) {
+
+                    document.body.classList.remove('color-picker-open');
+
                     _this3.visible = false;
                     _this3.$scope.$applyAsync();
 
