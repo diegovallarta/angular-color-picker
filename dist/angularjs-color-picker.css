@@ -4,7 +4,7 @@
  *
  * Copyright 2016 ruhley
  *
- * 2016-11-17 13:55:00
+ * 2016-12-11 18:25:43
  *
  */
 .color-picker-wrapper {
@@ -85,6 +85,9 @@
   border: 1px solid #FFFFFF;
   padding-right: 1px;
   box-sizing: content-box;
+}
+.color-picker-wrapper .color-picker-panel.ng-hide {
+  visibility: hidden;
 }
 .color-picker-wrapper .color-picker-panel .color-picker-grid-wrapper {
   display: table;
